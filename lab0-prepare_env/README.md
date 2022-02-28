@@ -12,17 +12,23 @@ Due to some reasons, we designed this K8S incubation program to be performed loc
 
 5. (*Optional*) You could deploy a simple app to test your local K8S cluster now!
 
-6. Install Istio, using your local Minikube cluster and Helm. [Here](https://istio.io/latest/docs/setup/install/helm/) are the instructions. Make sure to verify your installation in the end! 
+6. Install Istio, using your local Minikube cluster and Helm. [Here](https://istio.io/latest/docs/setup/install/helm/) are the instructions. Make sure to verify your installation in the end! **Note that step #4 in this instruction: "(Optional) Install an ingress gateway" is a must for our lab, so please do complete it!** Verify your installation with the screenshot below.
 
    ![](https://imgur.com/PIL7OS1.png)
 
-7. (*Optional*) Prepare a Jfrog cloud personal free account for helm repository(go [here](https://jfrog.com/artifactory/) and click 'start for free'). *Again, you can choose alternative helm repository vendors, but the following labs are based on Jfrog type. You need to adapt to your type if needed.*
+7. Follow the instructions [here](https://istio.io/latest/docs/setup/additional-setup/sidecar-injection/) to enable Istio sidecars in Minikube `default` namespace. It is suggested to validate your actions by installing a simple app `sleep` and describe its pod(use `kubectl -n default describe pod $podid`), you should see Istio sidecar container information in output.
 
-8. (*Optional*) Use `helm repo add` cmd to add your helm repository to your local environment.
+8. Follow instructions [here](https://istio.io/latest/docs/ops/integrations/prometheus/)  to prepare Istio Prometheus addon.
 
-9. Install Apache Maven cmd tool. 
+9. Follow instructions [here](https://kiali.io/docs/installation/quick-start/)  to complete Kiali installation. Note step #8 is a prerequisite for this step, otherwise you will face lots of errors in Lab2. Remember to choose Helm install way since we have no istioctl installed. Try accessing the UI once installation successful!
 
-10. Add following code snippet to your local maven settings.xml, `servers` tag:
+10. (*Optional*) Prepare a Jfrog cloud personal free account for helm repository(go [here](https://jfrog.com/artifactory/) and click 'start for free'). *Again, you can choose alternative helm repository vendors, but the following labs are based on Jfrog type. You need to adapt to your type if needed.*
+
+11. (*Optional*) Use `helm repo add` cmd to add your helm repository to your local environment.
+
+12. Install Apache Maven cmd tool. 
+
+13. Add following code snippet to your local maven settings.xml, `servers` tag:
 
     `<server>
 
