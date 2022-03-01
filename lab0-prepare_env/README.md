@@ -22,27 +22,23 @@ Due to some reasons, we designed this K8S incubation program to be performed loc
 
 9. Follow instructions [here](https://kiali.io/docs/installation/quick-start/)  to complete Kiali installation. Note step #8 is a prerequisite for this step, otherwise you will face lots of errors in Lab2. Remember to choose Helm install way since we have no istioctl installed. Try accessing the UI once installation successful!
 
-10. (*Optional*) Prepare a Jfrog cloud personal free account for helm repository(go [here](https://jfrog.com/artifactory/) and click 'start for free'). *Again, you can choose alternative helm repository vendors, but the following labs are based on Jfrog type. You need to adapt to your type if needed.*
+10. (*Optional*) Use `helm repo add` cmd to add your helm repository to your local environment.
 
-11. (*Optional*) Use `helm repo add` cmd to add your helm repository to your local environment.
+11. Install Apache Maven cmd tool. 
 
-12. Install Apache Maven cmd tool. 
+12. Add following code snippet to your local maven settings.xml, `servers` tag:
 
-13. Add following code snippet to your local maven settings.xml, `servers` tag:
+    `\<server\>
 
-    `<server>
+       \<id\>docker.io\</id\>
 
-       <id>docker.io</id>
+       \<username\>yourdockerhub_username\</username\>
 
-       <username>yourdockerhub_username</username>
+       \<password\>yourdockerhub_pw\</password\>
 
-       <password>yourdockerhub_pw</password>
+       \<configuration\>
+       \<email\>yourdockerhub_mail\</email\>
+       \</configuration\>
 
-       <configuration>
-
-    ​      <email>yourdockerhub_mail</email>
-
-    ​     </configuration>
-
-      </server>`
+    \</server\>`
 
