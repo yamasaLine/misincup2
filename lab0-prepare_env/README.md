@@ -2,7 +2,7 @@
 
 Due to some reasons, we designed this K8S incubation program to be performed locally, instead of any cloud vendors. Please follow the steps to prepare your local environment. (Note that, all the steps have been validated on win10, powershell. If you want to complete it in WSL or Linux, steps may vary and some extra configurations are potentially needed)
 
-1. Install minikube([here](https://minikube.sigs.k8s.io/docs/start/) the link). Please follow the steps in the page. 
+1. Install minikube([here](https://minikube.sigs.k8s.io/docs/start/) the link). Please follow the steps in the page. and execute `minikube tunnel` after minikube installed
 
 2. Make sure you have docker installed(for Win10 it is docker desktop). Prepare a free, personal docker hub account as your docker registry.(go to https://hub.docker.com/) *Note that it is your free to choose alternative docker registries, but the following steps may vary and we did not test such docker registry types.* After that, do a `docker login` in terminal.
 
