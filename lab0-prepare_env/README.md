@@ -20,7 +20,10 @@ Due to some reasons, we designed this K8S incubation program to be performed loc
 
 8. Follow instructions [here](https://istio.io/latest/docs/ops/integrations/prometheus/)  to prepare Istio Prometheus addon.
 
-9. Follow instructions [here](https://kiali.io/docs/installation/quick-start/)  to complete Kiali installation. Note step #8 is a prerequisite for this step, otherwise you will face lots of errors in Lab2. Remember to choose Helm install way since we have no istioctl installed. Try accessing the UI once installation successful!
+9. Follow instructions [here](https://kiali.io/docs/installation/quick-start/)  to complete Kiali installation. Note step #8 is a prerequisite for this step, otherwise you will face lots of errors in Lab2. 
+Remember to choose Helm install way since we have no istioctl installed. 
+Try accessing the UI once installation successful!
+After installed, please use http://localhost:20001, not `https`, to open kiali dashboard in your browser
 
 10. (*Optional*) Use `helm repo add` cmd to add your helm repository to your local environment.
 
